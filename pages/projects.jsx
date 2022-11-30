@@ -20,7 +20,7 @@ const projects = ({ repos }) => {
 export default projects
 
 export const getStaticProps = async () => {
-    const res = await fetch("https://api.github.com/users/fatihcaliss/repos");
+    const res = await fetch("https://api.github.com/users/fatihcaliss/repos?per_page=100&sort=created");
     const data = await res.json();
     return {
         props: {
